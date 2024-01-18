@@ -1,0 +1,158 @@
+<style>
+  body {
+    font-weight: bold;
+  }
+
+  .right-content2 {
+    background-color: #ffffff;
+  }
+
+  .tv_header {
+    display: flex;
+    justify-content: space-between; /* 요소 사이에 공간을 분배하여 정렬 */
+  }
+
+  .tv_header_text {
+    font-size: 15px;
+  }
+
+  .tv_header_refresh {
+    font-size: 20px;
+    color: red;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .div_todo,
+  .div_list {
+    display: inline-block;
+
+    margin-right: 1%;
+    vertical-align: top;
+  }
+  .yellow_header {
+    background-color: #fcf4cc;
+    text-align: center;
+  }
+  .cell_yellow {
+    background-color: yellow;
+  }
+  .btn_toggle {
+    background-color: black;
+    color: white;
+  }
+  .ar {
+    text-align: right;
+  }
+  .text_red {
+    color: red;
+  }
+  .tv_content {
+    overflow: auto;
+    display: flex;
+  }
+  .header_css {
+    display: flex;
+    justify-content: space-between;
+  }
+  .div_todo {
+    max-width: 25%;
+  }
+</style>
+
+<div class="tv_header">
+  <div id="remain_date" class="tv_header_text">
+    새로고침 잔여시간
+    <span id="refresh_time" class="tv_header_refresh"></span>
+  </div>
+</div>
+<div class="tv_content">
+  <div class="div_todo">
+    <div class="header_css">
+      <div class="right-tap-btn ajaxsetx" id="search">
+        <span class="right-btn-text">
+          <i class="fa fa-search" aria-hidden="true"></i> 조회
+        </span>
+      </div>
+      <label for="view_yn_ser">
+        <input type="checkbox" id="view_yn_ser" />
+        읽음숨김
+      </label>
+    </div>
+    <br />
+    <table id="todo">
+      <tr class="yellow_header">
+        <td colspan="4">To-Do 현황</td>
+      </tr>
+      <tr class="yellow_header">
+        <td>카테고리</td>
+        <td>발신일시</td>
+        <td>제목</td>
+        <td>읽음</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="div_list">
+    <input type="text" id="start_ym_ser" class="ym_ser" />
+    ~
+    <input type="text" id="end_ym_ser" class="ym_ser" />
+
+    <div class="right-tap-btn ajaxsetx" id="search_list">
+      <span class="right-btn-text"
+        ><i class="fa fa-search" aria-hidden="true"></i> 조회</span
+      >
+    </div>
+
+    <table id="list">
+      <tr class="yellow_header">
+        <td colspan="2" rowspan="3"></td>
+        <td colspan="10">매출</td>
+        <td colspan="5">재고</td>
+        <td colspan="4">선적</td>
+        <td rowspan="3">미출하</td>
+      </tr>
+      <tr class="yellow_header">
+        <td colspan="2">계획</td>
+        <td colspan="2" class="cell_yellow" id="prev_month"></td>
+        <td colspan="2" class="cell_yellow" id="last_month"></td>
+        <td colspan="2">증감</td>
+        <td colspan="2">달성율</td>
+        <td rowspan="2">양품</td>
+        <td rowspan="2">보관</td>
+        <td rowspan="2">특별</td>
+        <td rowspan="2">NG</td>
+        <td rowspan="2" class="cell_yellow">합계</td>
+        <td rowspan="2" id="month_0"></td>
+        <td rowspan="2" id="month_1"></td>
+        <td rowspan="2" id="month_2"></td>
+        <td rowspan="2" class="cell_yellow">합계</td>
+        <!-- <td rowspan="2">미출하</td> -->
+      </tr>
+      <tr class="yellow_header">
+        <td>댓수</td>
+        <td>금액</td>
+        <td class="cell_yellow">댓수</td>
+        <td class="cell_yellow">금액</td>
+        <td class="cell_yellow">댓수</td>
+        <td class="cell_yellow">금액</td>
+        <td>댓수</td>
+        <td>금액</td>
+        <td>댓수</td>
+        <td>금액</td>
+      </tr>
+    </table>
+  </div>
+</div>
