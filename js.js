@@ -1,13 +1,6 @@
 const sreenHeight = window.screen.height;
 
-let element = $(".tv_content");
-// let rect_top = element.offset().top;
-let test = sreenHeight - 770;
-
-console.log("sreenHeight: ", sreenHeight);
-console.log(test);
-
-$(".tv_content").height(sreenHeight - test);
+$(".tv_content").height(sreenHeight - 310);
 
 function getYearBasedOnMonth() {
   const now = new Date();
