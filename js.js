@@ -1,6 +1,14 @@
 const sreenHeight = window.screen.height;
-console.log(sreenHeight);
-$(".tv_content").height(sreenHeight - 305);
+
+let element = $(".tv_content");
+// let rect_top = element.offset().top;
+let test = sreenHeight - 770;
+
+console.log("sreenHeight: ", sreenHeight);
+console.log(test);
+
+$(".tv_content").height(sreenHeight - test);
+
 function getYearBasedOnMonth() {
   const now = new Date();
   const currentYear = now.getFullYear();
@@ -124,7 +132,7 @@ function callData() {
               txt += `<tr class="toto_row" data-id="0">`;
               txt += `    <td class="al"></td>`;
               txt += `    <td class="ac"></td>`;
-              txt += `    <td class="al"></td>`;
+              txt += `    <td class="al al_css"></td>`;
               txt += `    <td class="ar"></td>`;
               txt += `</tr>`;
             } else {
@@ -133,7 +141,7 @@ function callData() {
               txt += `<tr class="toto_row" data-id="${item.id}">`;
               txt += `    <td class="al">${item.type2}</td>`;
               txt += `    <td class="ac">${item.createdate}</td>`;
-              txt += `    <td class="al">${item.title}</td>`;
+              txt += `    <td class="al al_css">${item.title}</td>`;
               txt += `    <td class="ar">${
                 item.view_yn == "Y" ? "O" : ""
               }</td>`;

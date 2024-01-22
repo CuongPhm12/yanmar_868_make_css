@@ -67,8 +67,25 @@
     display: flex;
     justify-content: space-between;
   }
-  .div_todo {
-    max-width: 25%;
+  /* .div_todo {
+    max-width: 100 px;
+  }*/
+
+  .al {
+    text-align: center;
+  }
+  .ac,
+  .al,
+  .ar {
+    white-space: nowrap;
+    min-width: 50px;
+  }
+  .al_css {
+    display: block;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 </style>
 
@@ -96,7 +113,7 @@
         <td colspan="4">To-Do 현황</td>
       </tr>
       <tr class="yellow_header">
-        <td>카테고리</td>
+        <td>카테</td>
         <td>발신일시</td>
         <td>제목</td>
         <td>읽음</td>
